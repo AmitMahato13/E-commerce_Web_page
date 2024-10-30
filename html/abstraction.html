@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Employee{
+
+            constructor (name,age,basicSalary){ 
+                this.name=name;
+                this.age=age;
+                this.basicSalary=basicSalary;
+                this.monthlybonus=1000;
+
+            }
+            calculatefinalSalary(){
+                let finalSalary=this.basicSalary+ this.monthlybonus;
+                console.log(finalSalary);
+            }
+            EmployeeDetail(){
+
+                console.log(`hi my name is ${this.name} and my age is${this.age}`)
+            }
+
+        }
+        let obj=new Employee("Amit", 24, 10000);
+        obj.calculatefinalSalary();
+        obj.EmployeeDetail();
+
+    </script>
+    
+</body>
+</html>

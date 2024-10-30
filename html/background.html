@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REGISTRATION PAGE</title>
+</head>
+<body>
+  <form id="REGISTRATIONPAGEID">
+
+    <label for="username">NAME:</label>
+    <input type="text" id="username" name="user">
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="text" id="password" name="pass">
+    <br>
+
+    <button type="submit">REGISTRATION</button>
+
+
+  </form>
+
+  <script>
+     document.getElementById("REGISTRATIONPAGEID").addEventListener("submit", function(event)
+     {
+       event.preventDefault();
+
+       let username=document.getElementById("username").value;
+       let pass=document.getElementById("password").value;
+
+
+       localStorage.setItem("name", username);
+       localStorage.setItem("password", pass);
+
+        alert("Registration successfully!");
+
+
+        document.getElementById("RegistrationPageId").reset();
+
+        window.location.href="background.html";
+
+     })
+
+
+
+
+
+  </script>
+  
+
+</body>
+</html>
